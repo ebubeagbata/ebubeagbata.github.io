@@ -1,0 +1,23 @@
+/*-----------------------------------*\
+  #MAIN
+\*-----------------------------------*/
+
+main {
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+/**
+   * MAIN 
+   */
+
+main {
+  margin-bottom: 60px;
+}
+
+.main-content {
+  position: relative;
+  width: max-content;
+  margin: auto;
+}

@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar";
-import MainContent from "../components/MainContent";
 import '../css/main.css';
+import { Outlet } from "react-router-dom";
+import NavBar from "../components/NavBar";
 
 // src/pages/Main.tsx
 
@@ -9,7 +10,10 @@ export default function Main() {
     <main>
         {/* Head content va gestito con react-helmet o simili, qui lo omettiamo */}
         <Sidebar />
-        <MainContent />
+        <div className="main-content">
+            <NavBar />
+            <Outlet />
+        </div>
     </main>
   );
 }

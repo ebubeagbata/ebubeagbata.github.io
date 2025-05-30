@@ -2,9 +2,8 @@ import { IonIcon } from "@ionic/react";
 import { bookOutline } from "ionicons/icons";
 
 export default function Resume() {
-    console.log("Resume component rendered");
   return (
-    <article className="resume" data-page="resume">
+    <article className="resume active" data-page="resume">
       <header>
         <h2 className="h2 article-title">Resume</h2>
       </header>

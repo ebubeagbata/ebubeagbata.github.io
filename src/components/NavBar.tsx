@@ -20,7 +20,6 @@ export default function NavBar() {
                         <button
                             className={`navbar-link${location.pathname === link.path ? " active" : ""}`}
                             onClick={() => navigate(link.path)}
-                            data-nav-link
                         >
                             {link.label}
                         </button>

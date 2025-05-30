@@ -68,7 +68,6 @@ const projects = [
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -104,9 +103,8 @@ export default function Portfolio() {
           <button
             className="filter-select"
             data-select
-            onClick={() => setDropdownOpen((open) => !open)}
           >
-            <div className="select-value" data-selecct-value>
+            <div className="select-value">
               {selectedCategoryLabel}
             </div>
             <div className="select-icon">
@@ -114,7 +112,6 @@ export default function Portfolio() {
             </div>
           </button>
 
-          {dropdownOpen && (
             <ul className="select-list">
               {categories.map((cat) => (
                 <li className="select-item" key={cat.value}>
@@ -122,7 +119,6 @@ export default function Portfolio() {
                     data-select-item
                     onClick={() => {
                       setSelectedCategory(cat.value);
-                      setDropdownOpen(false);
                     }}
                   >
                     {cat.label}
@@ -130,7 +126,6 @@ export default function Portfolio() {
                 </li>
               ))}
             </ul>
-          )}
         </div>
 
         <ul className="project-list">

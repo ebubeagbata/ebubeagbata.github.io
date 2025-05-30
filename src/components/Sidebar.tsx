@@ -8,7 +8,6 @@ import {
   mailOutline,
   phonePortraitOutline,
 } from "ionicons/icons";
-import "../css/sidebar.css";
 
 export default function Sidebar() {
   return (

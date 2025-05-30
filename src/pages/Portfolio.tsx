@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IonIcon } from "@ionic/react";
-import { chevronBack, eyeOutline } from "ionicons/icons";
+import { chevronBack, eyeOutline, closeOutline } from "ionicons/icons";
 
 const categories = [
   { label: "All", value: "all" },
@@ -68,6 +68,7 @@ const projects = [
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [zoomedProject, setZoomedProject] = useState<null | typeof projects[0]>(null);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -136,7 +137,11 @@ export default function Portfolio() {
               data-category={project.category}
               key={project.title + idx}
             >
-              <a href="#">
+              <button
+                style={{ all: "unset", cursor: "pointer", display: "block", width: "100%" }}
+                onClick={() => setZoomedProject(project)}
+                aria-label={`Zoom ${project.title}`}
+              >
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <IonIcon icon={eyeOutline} />
@@ -148,11 +153,77 @@ export default function Portfolio() {
                   {categories.find((c) => c.value === project.category)
                     ?.label || project.category}
                 </p>
-              </a>
+              </button>
             </li>
           ))}
         </ul>
       </section>
+
+      {zoomedProject && (
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 1000,
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.7)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={() => setZoomedProject(null)}
+        >
+          <div
+            style={{
+              background: "#fff",
+              borderRadius: 8,
+              padding: 24,
+              maxWidth: 600,
+              width: "90vw",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+              position: "relative",
+            }}
+            onClick={e => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setZoomedProject(null)}
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: 24,
+                color: "#333",
+              }}
+              aria-label="Close zoom"
+            >
+              <IonIcon icon={closeOutline} />
+            </button>
+            <img
+              src={zoomedProject.img}
+              alt={zoomedProject.alt}
+              style={{
+                width: "100%",
+                borderRadius: 8,
+                marginBottom: 16,
+                objectFit: "contain",
+                maxHeight: "60vh",
+                background: "#f5f5f5",
+              }}
+            />
+
+            <h3 style={{ margin: "0 0 8px" }}>{zoomedProject.title}</h3>
+            <p style={{ color: "#888", margin: 0 }}>
+              {categories.find((c) => c.value === zoomedProject.category)?.label ||
+                zoomedProject.category}
+            </p>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

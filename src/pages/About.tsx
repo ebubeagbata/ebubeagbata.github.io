@@ -100,37 +100,53 @@ export default function About() {
       </section>
 
       {modal && (
-        <div className={`modal-container active`}>
-          <div
-            className="overlay"
-            data-overlay
-            onClick={() => setModal(undefined)}
-          ></div>
-
-          <section className="testimonials-modal">
-            <button
-              className="modal-close-btn"
+        <div
+          style={{
+            position: "fixed",
+            zIndex: 1000,
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.7)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={() => setModal(undefined)}
+        >
+          <div className={`modal-container active`}>
+            <div
+              className="overlay"
+              data-overlay
               onClick={() => setModal(undefined)}
-            >
-              <IonIcon icon={closeOutline} />
-            </button>
+            ></div>
 
-            <div className="modal-img-wrapper">
-              <figure className="modal-avatar-box">
-                <img src={modal.avatar} alt={modal.name} width="80" />
-              </figure>
+            <section className="testimonials-modal">
+              <button
+                className="modal-close-btn"
+                onClick={() => setModal(undefined)}
+              >
+                <IonIcon icon={closeOutline} />
+              </button>
 
-              <img src="./images/icon-quote.svg" alt="quote icon" />
-            </div>
+              <div className="modal-img-wrapper">
+                <figure className="modal-avatar-box">
+                  <img src={modal.avatar} alt={modal.name} width="80" />
+                </figure>
 
-            <div className="modal-content">
-              <h4 className="h3 modal-title">{modal.name}</h4>
-
-              <div>
-                <p>{modal.text}</p>
+                <img src="./images/icon-quote.svg" alt="quote icon" />
               </div>
-            </div>
-          </section>
+
+              <div className="modal-content">
+                <h4 className="h3 modal-title">{modal.name}</h4>
+
+                <div>
+                  <p>{modal.text}</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       )}
 

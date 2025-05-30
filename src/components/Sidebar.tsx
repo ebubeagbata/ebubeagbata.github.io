@@ -7,6 +7,7 @@ import {
   logoTwitter,
   mailOutline,
   phonePortraitOutline,
+  calendarOutline,
 } from "ionicons/icons";
 
 export default function Sidebar() {
@@ -69,22 +70,11 @@ export default function Sidebar() {
 
           <li className="contact-item">
             <div className="icon-box">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-calendar"
-              ></svg>
+              <IonIcon icon={calendarOutline}></IonIcon>
             </div>
 
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
-
               <time dateTime="1982-06-23">June 23, 1982</time>
             </div>
           </li>

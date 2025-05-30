@@ -8,7 +8,6 @@ import NavBar from "../components/NavBar";
 export default function Main() {
   return (
     <main>
-        {/* Head content va gestito con react-helmet o simili, qui lo omettiamo */}
         <Sidebar />
         <div className="main-content">
             <NavBar />

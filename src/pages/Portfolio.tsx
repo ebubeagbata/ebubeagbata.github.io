@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IonIcon } from "@ionic/react";
 import { chevronBack, eyeOutline, closeOutline } from "ionicons/icons";
+import { Document, Page } from "react-pdf";
 
 const categories = [
   { label: "All", value: "all" },
@@ -15,60 +16,71 @@ const projects = [
     category: "web development",
     img: "./images/project-1.jpg",
     alt: "finance",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Orizon",
     category: "web development",
     img: "./images/project-2.png",
     alt: "orizon",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Fundo",
     category: "web design",
     img: "./images/project-3.jpg",
     alt: "fundo",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Brawlhalla",
     category: "applications",
     img: "./images/project-4.png",
     alt: "brawlhalla",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "DSM.",
     category: "web design",
     img: "./images/project-5.png",
     alt: "dsm.",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "MetaSpark",
     category: "web design",
     img: "./images/project-6.png",
     alt: "metaspark",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Summary",
     category: "web development",
     img: "./images/project-7.png",
     alt: "summary",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Task Manager",
     category: "applications",
     img: "./images/project-8.jpg",
     alt: "task manager",
+    pdf: "./pdfs/Devil.pdf",
   },
   {
     title: "Arrival",
     category: "web development",
     img: "./images/project-9.png",
     alt: "arrival",
+    pdf: "./pdfs/Devil.pdf",
   },
 ];
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [zoomedProject, setZoomedProject] = useState<null | typeof projects[0]>(null);
+  const [zoomedProject, setZoomedProject] = useState<
+    null | (typeof projects)[0]
+  >(null);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -101,32 +113,27 @@ export default function Portfolio() {
         </ul>
 
         <div className="filter-select-box">
-          <button
-            className="filter-select"
-            data-select
-          >
-            <div className="select-value">
-              {selectedCategoryLabel}
-            </div>
+          <button className="filter-select" data-select>
+            <div className="select-value">{selectedCategoryLabel}</div>
             <div className="select-icon">
               <IonIcon icon={chevronBack} />
             </div>
           </button>
 
-            <ul className="select-list">
-              {categories.map((cat) => (
-                <li className="select-item" key={cat.value}>
-                  <button
-                    data-select-item
-                    onClick={() => {
-                      setSelectedCategory(cat.value);
-                    }}
-                  >
-                    {cat.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+          <ul className="select-list">
+            {categories.map((cat) => (
+              <li className="select-item" key={cat.value}>
+                <button
+                  data-select-item
+                  onClick={() => {
+                    setSelectedCategory(cat.value);
+                  }}
+                >
+                  {cat.label}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <ul className="project-list">
@@ -138,7 +145,12 @@ export default function Portfolio() {
               key={project.title + idx}
             >
               <button
-                style={{ all: "unset", cursor: "pointer", display: "block", width: "100%" }}
+                style={{
+                  all: "unset",
+                  cursor: "pointer",
+                  display: "block",
+                  width: "100%",
+                }}
                 onClick={() => setZoomedProject(project)}
                 aria-label={`Zoom ${project.title}`}
               >
@@ -180,12 +192,12 @@ export default function Portfolio() {
               background: "#fff",
               borderRadius: 8,
               padding: 24,
-              maxWidth: 600,
+              maxWidth: "90vw",
               width: "90vw",
               boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
               position: "relative",
             }}
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setZoomedProject(null)}
@@ -203,24 +215,17 @@ export default function Portfolio() {
             >
               <IonIcon icon={closeOutline} />
             </button>
-            <img
-              src={zoomedProject.img}
-              alt={zoomedProject.alt}
+            <div
               style={{
-                width: "100%",
-                borderRadius: 8,
-                marginBottom: 16,
-                objectFit: "contain",
-                maxHeight: "60vh",
-                background: "#f5f5f5",
+                maxHeight: "90vh",
+                overflowY: "auto",
+                overflowX: "-moz-initial",
               }}
-            />
-
-            <h3 style={{ margin: "0 0 8px" }}>{zoomedProject.title}</h3>
-            <p style={{ color: "#888", margin: 0 }}>
-              {categories.find((c) => c.value === zoomedProject.category)?.label ||
-                zoomedProject.category}
-            </p>
+            >
+              <Document renderMode="canvas" file={zoomedProject.pdf}>
+                <Page pageNumber={1} />
+              </Document>
+            </div>
           </div>
         </div>
       )}

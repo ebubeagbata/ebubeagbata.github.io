@@ -16,7 +16,7 @@ export default function Sidebar() {
         <figure className="avatar-box">
           <img
             src="./images/avatar-ebube.png"
-            alt="Richard hanrick"
+            alt="Ebubechukwu Agbata"
             style={{
               objectFit: "cover",
               objectPosition: "center",
@@ -27,8 +27,8 @@ export default function Sidebar() {
         </figure>
 
         <div className="info-content">
-          <h1 className="name" title="Richard hanrick">
-            Ebubechukwu <span className="surname">Agbata</span>
+          <h1 className="name" title="Ebubechukwu Agbata">
+            Ebubechukwu Agbata
           </h1>
 
           <p className="title">Brand & UX/UI Designer</p>

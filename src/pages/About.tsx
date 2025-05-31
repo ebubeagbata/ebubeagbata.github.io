@@ -19,18 +19,16 @@ export default function About() {
 
       <section className="about-text">
         <p>
-          I'm Creative Director and UI/UX Designer from Sydney, Australia,
-          working in web development and print media. I enjoy turning complex
-          problems into simple, beautiful and intuitive designs.
+          Hi, I'm Ebubechukwu — a passionate brand designer with a growing focus
+          on UI/UX design. With a strong foundation in visual storytelling and
+          brand identity, I'm now channeling my creativity and user-centered
+          mindset into crafting intuitive digital experiences.
         </p>
 
         <p>
-          My job is to build your website so that it is functional and
-          user-friendly but at the same time attractive. Moreover, I add
-          personal touch to your product and make sure that is eye-catching and
-          easy to use. My aim is to bring across your message and identity in
-          the most creative way. I created web design for many famous brand
-          companies.
+          I'm currently seeking opportunities where I can blend my design
+          background with my new skills in UI/UX to create impactful,
+          user-friendly products. Let's build something meaningful together.
         </p>
       </section>
 
@@ -39,23 +37,18 @@ export default function About() {
         <SkillList>
           <SkillItem
             icon="./images/icon-design.svg"
-            title="Web design"
-            text="The most modern and high-quality design made at a professional level."
+            title="Brand design"
+            text="Creating a unique and memorable brand identity that stands out."
           />
           <SkillItem
             icon="./images/icon-dev.svg"
-            title="Web development"
-            text="High-quality development of sites at the professional level."
+            title="Typography"
+            text="Crafting visually appealing and readable typography for various media."
           />
           <SkillItem
             icon="./images/icon-app.svg"
-            title="Mobile apps"
-            text="Professional development of applications for iOS and Android."
-          />
-          <SkillItem
-            icon="./images/icon-photo.svg"
-            title="Photography"
-            text="I make high-quality photos of any category at a professional level."
+            title="UX/UI design"
+            text="Designing user-friendly interfaces and experiences for digital products."
           />
         </SkillList>
       </section>

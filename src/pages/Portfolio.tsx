@@ -234,6 +234,7 @@ export default function Portfolio() {
                 cursor: "pointer",
                 fontSize: 24,
                 color: "#333",
+                zIndex: 1000,
               }}
               aria-label="Close zoom"
             >

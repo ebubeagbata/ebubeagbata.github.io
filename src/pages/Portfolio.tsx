@@ -3,6 +3,8 @@ import { IonIcon } from "@ionic/react";
 import { chevronBack, eyeOutline, closeOutline } from "ionicons/icons";
 import { Document, Page } from "react-pdf";
 import { useWindowSize } from "@uidotdev/usehooks";
+import "react-pdf/dist/Page/TextLayer.css";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 
 const categories = [
   { label: "All", value: "all" },
@@ -83,6 +85,7 @@ export default function Portfolio() {
     null | (typeof projects)[0]
   >(null);
   const { width } = useWindowSize();
+  const [documentLoaded, setDocumentLoaded] = useState(false);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -92,6 +95,19 @@ export default function Portfolio() {
   const selectedCategoryLabel =
     categories.find((c) => c.value === selectedCategory)?.label ||
     "Select category";
+
+  // Just to full the space while loading
+  const loadingIndicator = (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "90vh",
+        width: "100%",
+      }}
+    />
+  );
 
   return (
     <article className="portfolio active" data-page="portfolio">
@@ -187,7 +203,10 @@ export default function Portfolio() {
             alignItems: "center",
             justifyContent: "center",
           }}
-          onClick={() => setZoomedProject(null)}
+          onClick={() => {
+            setZoomedProject(null);
+            setDocumentLoaded(false);
+          }}
         >
           <div
             style={{
@@ -202,7 +221,10 @@ export default function Portfolio() {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setZoomedProject(null)}
+              onClick={() => {
+                setZoomedProject(null);
+                setDocumentLoaded(false);
+              }}
               style={{
                 position: "absolute",
                 top: 12,
@@ -220,13 +242,40 @@ export default function Portfolio() {
             <div
               style={{
                 maxHeight: "90vh",
-                overflowY: "auto",
-                overflowX: "-moz-initial",
+                overflowY: documentLoaded ? "auto" : "hidden",
+                overflowX: "hidden",
+                position: "relative",
               }}
             >
-              <Document renderMode="canvas" file={zoomedProject.pdf}>
-                <Page pageNumber={1} width={width ? width * 0.8 : 1.0} />
+              <Document
+                file={zoomedProject.pdf}
+                loading={loadingIndicator}
+                onLoadedData={(pdf) => {
+                  console.log(`Loaded PDF with ${pdf.numPages} pages`);
+                }}
+              >
+                <Page
+                  onRenderSuccess={() => {
+                    setDocumentLoaded(true);
+                  }}
+                  loading={loadingIndicator}
+                  pageNumber={1}
+                  width={width ? width * 0.8 : 1.0}
+                />
               </Document>
+              {!documentLoaded && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    textAlign: "center",
+                  }}
+                >
+                  <p>Loading document...</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -108,59 +108,94 @@ export default function Resume() {
         <ul className="skills-list content-card">
           <li className="skills-item">
             <div className="title-wrapper">
-              <h5 className="h5">Web design</h5>
-              <data value="80">80%</data>
-            </div>
-
-            <div className="skill-progress-bg">
-              <div
-                className="skill-progress-fill"
-                style={{ width: "80%" }}
-              ></div>
-            </div>
-          </li>
-
-          <li className="skills-item">
-            <div className="title-wrapper">
-              <h5 className="h5">Graphic design</h5>
-              <data value="70">70%</data>
-            </div>
-
-            <div className="skill-progress-bg">
-              <div
-                className="skill-progress-fill"
-                style={{ width: "70%" }}
-              ></div>
-            </div>
-          </li>
-
-          <li className="skills-item">
-            <div className="title-wrapper">
               <h5 className="h5">Branding</h5>
-              <data value="90">90%</data>
+              <data value="95">95%</data>
             </div>
 
             <div className="skill-progress-bg">
               <div
                 className="skill-progress-fill"
-                style={{ width: "90%" }}
+                style={{ width: "95%" }}
               ></div>
             </div>
           </li>
 
           <li className="skills-item">
             <div className="title-wrapper">
-              <h5 className="h5">WordPress</h5>
-              <data value="50">50%</data>
+              <h5 className="h5">UX/UI</h5>
+              <data value="65">65%</data>
             </div>
 
             <div className="skill-progress-bg">
               <div
                 className="skill-progress-fill"
-                style={{ width: "50%" }}
+                style={{ width: "65%" }}
               ></div>
             </div>
           </li>
+
+          <li className="skills-item">
+            <div className="title-wrapper">
+              <h5 className="h5">Typography</h5>
+              <data value="95">95%</data>
+            </div>
+
+            <div className="skill-progress-bg">
+              <div
+                className="skill-progress-fill"
+                style={{ width: "95%" }}
+              ></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section className="skill" style={{ marginTop: "2rem" }}>
+        <h3 className="h3 skills-title">Languages</h3>
+
+        <ul className="skills-list content-card">
+          <li className="skills-item">
+            <div className="title-wrapper">
+              <h5 className="h5">English</h5>
+              <data value="100">100%</data>
+            </div>
+
+            <div className="skill-progress-bg">
+              <div
+                className="skill-progress-fill"
+                style={{ width: "100%" }}
+              ></div>
+            </div>
+          </li>
+
+          <li className="skills-item">
+            <div className="title-wrapper">
+              <h5 className="h5">French</h5>
+              <data value="60">60%</data>
+            </div>
+
+            <div className="skill-progress-bg">
+              <div
+                className="skill-progress-fill"
+                style={{ width: "60%" }}
+              ></div>
+            </div>
+          </li>
+
+          <li className="skills-item">
+            <div className="title-wrapper">
+              <h5 className="h5">Italian</h5>
+              <data value="30">30%</data>
+            </div>
+
+            <div className="skill-progress-bg">
+              <div
+                className="skill-progress-fill"
+                style={{ width: "30%" }}
+              ></div>
+            </div>
+          </li>
+
         </ul>
       </section>
     </article>

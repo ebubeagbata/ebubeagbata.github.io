@@ -6,7 +6,6 @@ import {
   logoInstagram,
   logoTwitter,
   mailOutline,
-  phonePortraitOutline,
   calendarOutline,
 } from "ionicons/icons";
 
@@ -16,18 +15,23 @@ export default function Sidebar() {
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
-            src="./images/my-avatar.png"
+            src="./images/avatar-ebube.png"
             alt="Richard hanrick"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+              borderRadius: "18%",
+            }}
             width="80"
           ></img>
         </figure>
 
         <div className="info-content">
           <h1 className="name" title="Richard hanrick">
-            Richard hanrick
+            Ebubechukwu <span className="surname">Agbata</span>
           </h1>
 
-          <p className="title">Web developer</p>
+          <p className="title">Brand & UX/UI Designer</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn>
@@ -48,22 +52,11 @@ export default function Sidebar() {
             <div className="contact-info">
               <p className="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" className="contact-link">
-                richard@example.com
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <IonIcon icon={phonePortraitOutline}></IonIcon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" className="contact-link">
-                +1 (213) 352-2795
+              <a
+                href="mailto:agbataebubechukuw@gmail.com"
+                className="contact-link"
+              >
+                agbataebubechukuw@gmail.com
               </a>
             </div>
           </li>
@@ -75,7 +68,7 @@ export default function Sidebar() {
 
             <div className="contact-info">
               <p className="contact-title">Birthday</p>
-              <time dateTime="1982-06-23">June 23, 1982</time>
+              <time dateTime="1995-09-23">September 23, 1995</time>
             </div>
           </li>
 
@@ -87,7 +80,7 @@ export default function Sidebar() {
             <div className="contact-info">
               <p className="contact-title">Location</p>
 
-              <address>Sacramento, California, USA</address>
+              <address>Italy - Nigeria</address>
             </div>
           </li>
         </ul>

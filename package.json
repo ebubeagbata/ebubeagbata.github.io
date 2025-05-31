@@ -12,6 +12,7 @@
   "dependencies": {
     "@ionic/react": "^8.5.8",
     "@react-router/node": "^7.6.1",
+    "@uidotdev/usehooks": "^2.4.1",
     "ionicons": "^8.0.8",
     "isbot": "^5",
     "react": "^19.1.0",

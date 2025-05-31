@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IonIcon } from "@ionic/react";
 import { chevronBack, eyeOutline, closeOutline } from "ionicons/icons";
 import { Document, Page } from "react-pdf";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 const categories = [
   { label: "All", value: "all" },
@@ -81,6 +82,7 @@ export default function Portfolio() {
   const [zoomedProject, setZoomedProject] = useState<
     null | (typeof projects)[0]
   >(null);
+  const { width } = useWindowSize();
 
   const filteredProjects =
     selectedCategory === "all"
@@ -223,7 +225,7 @@ export default function Portfolio() {
               }}
             >
               <Document renderMode="canvas" file={zoomedProject.pdf}>
-                <Page pageNumber={1} />
+                <Page pageNumber={1} width={width ? width * 0.8 : 1.0} />
               </Document>
             </div>
           </div>

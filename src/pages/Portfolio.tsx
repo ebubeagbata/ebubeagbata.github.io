@@ -5,6 +5,7 @@ import { Document, Page } from "react-pdf";
 import { useWindowSize } from "@uidotdev/usehooks";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
+import '../css/animationLoading.css';
 
 const categories = [
   { label: "All", value: "all" },
@@ -238,7 +239,19 @@ export default function Portfolio() {
                     textAlign: "center",
                   }}
                 >
-                  <p>Loading document...</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div className="loading-dots">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

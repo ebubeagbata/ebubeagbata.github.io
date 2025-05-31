@@ -2,11 +2,10 @@ import { IonIcon } from "@ionic/react";
 import {
   chevronDown,
   locationOutline,
-  logoFacebook,
   logoInstagram,
-  logoTwitter,
   mailOutline,
   calendarOutline,
+  logoTiktok,
 } from "ionicons/icons";
 
 export default function Sidebar() {
@@ -89,19 +88,21 @@ export default function Sidebar() {
 
         <ul className="social-list">
           <li className="social-item">
-            <a href="#" className="social-link">
-              <IonIcon icon={logoFacebook}></IonIcon>
+            <a
+              href="https://www.tiktok.com/@brand.ebube"
+              className="social-link"
+              target="_blank"
+            >
+              <IonIcon icon={logoTiktok}></IonIcon>
             </a>
           </li>
 
           <li className="social-item">
-            <a href="#" className="social-link">
-              <IonIcon icon={logoTwitter}></IonIcon>
-            </a>
-          </li>
-
-          <li className="social-item">
-            <a href="#" className="social-link">
+            <a
+              href="https://www.instagram.com/brand_ebube"
+              target="_blank"
+              className="social-link"
+            >
               <IonIcon icon={logoInstagram}></IonIcon>
             </a>
           </li>

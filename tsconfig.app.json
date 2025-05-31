@@ -23,7 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-    "include": [
+  "include": [
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",

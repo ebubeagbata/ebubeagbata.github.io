@@ -53,7 +53,7 @@ export default function Portfolio() {
   const { width } = useWindowSize();
   const [documentLoaded, setDocumentLoaded] = useState(false);
 
-  pdfjs.GlobalWorkerOptions.workerSrc = "pdf.worker.mjs";
+  pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
 
   const filteredProjects =
     selectedCategory === "all"

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { IonIcon } from "@ionic/react";
 import { eyeOutline, closeOutline } from "ionicons/icons";
 import { Document, Page } from "react-pdf";
-import { pdfjs } from "react-pdf";
 import { useWindowSize } from "@uidotdev/usehooks";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -53,8 +52,6 @@ export default function Portfolio() {
   >(null);
   const { width } = useWindowSize();
   const [documentLoaded, setDocumentLoaded] = useState(false);
-
-  pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs";
 
   const filteredProjects =
     selectedCategory === "all"

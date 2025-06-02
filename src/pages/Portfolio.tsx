@@ -42,7 +42,7 @@ const projects = [
     category: "branding",
     img: "/images/projects/wild&organic-thumbnail.png",
     alt: "wild&organic",
-    pdf: "/pdfs/Devil.pdf",
+    pdf: "/pdfs/Wide.pdf",
   },
 ];
 

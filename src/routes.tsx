@@ -6,7 +6,7 @@ export default [
     index("./pages/About.tsx"),
     route("resume", "./pages/Resume.tsx"),
     route("portfolio", "./pages/Portfolio.tsx"),
-    route("blog", "./pages/Blog.tsx"),
+    // route("blog", "./pages/Blog.tsx"),
     route("contact", "./pages/Contact.tsx"),
   ]),
 ] satisfies RouteConfig;

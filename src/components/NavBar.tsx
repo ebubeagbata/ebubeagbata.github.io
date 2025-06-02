@@ -8,7 +8,7 @@ export default function NavBar() {
         { label: "About", path: "/" },
         { label: "Resume", path: "/resume" },
         { label: "Portfolio", path: "/portfolio" },
-        { label: "Blog", path: "/blog" },
+        //{ label: "Blog", path: "/blog" },
         { label: "Contact", path: "/contact" },
     ];
 

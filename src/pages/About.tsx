@@ -36,17 +36,17 @@ export default function About() {
         <h3 className="h3 service-title">What i'm doing</h3>
         <SkillList>
           <SkillItem
-            icon="./images/icon-design.svg"
+            icon="/images/icon-design.svg"
             title="Brand design"
             text="Creating a unique and memorable brand identity that stands out."
           />
           <SkillItem
-            icon="./images/icon-dev.svg"
+            icon="/images/icon-dev.svg"
             title="Typography"
             text="Crafting visually appealing and readable typography for various media."
           />
           <SkillItem
-            icon="./images/icon-app.svg"
+            icon="/images/icon-app.svg"
             title="UX/UI design"
             text="Designing user-friendly interfaces and experiences for digital products."
           />
@@ -58,7 +58,7 @@ export default function About() {
 
         <TestimonialList>
           <TestimonialItem
-            avatar="./images/avatar-1.png"
+            avatar="/images/avatar-1.png"
             name="Daniel lewis"
             text="Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
             onClick={(avatar, name, text) => {
@@ -66,7 +66,7 @@ export default function About() {
             }}
           />
           <TestimonialItem
-            avatar="./images/avatar-2.png"
+            avatar="/images/avatar-2.png"
             name="Jessica miller"
             text="Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
             onClick={(avatar, name, text) => {
@@ -74,7 +74,7 @@ export default function About() {
             }}
           />
           <TestimonialItem
-            avatar="./images/avatar-3.png"
+            avatar="/images/avatar-3.png"
             name="Emily evans"
             text="Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
             onClick={(avatar, name, text) => {
@@ -82,7 +82,7 @@ export default function About() {
             }}
           />
           <TestimonialItem
-            avatar="./images/avatar-4.png"
+            avatar="/images/avatar-4.png"
             name="Henry william"
             text="Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
             onClick={(avatar, name, text) => {
@@ -128,7 +128,7 @@ export default function About() {
                   <img src={modal.avatar} alt={modal.name} width="80" />
                 </figure>
 
-                <img src="./images/icon-quote.svg" alt="quote icon" />
+                <img src="/images/icon-quote.svg" alt="quote icon" />
               </div>
 
               <div className="modal-content">
@@ -149,37 +149,37 @@ export default function About() {
         <ul className="clients-list has-scrollbar">
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-1-color.png" alt="client logo" />
+              <img src="/images/logo-1-color.png" alt="client logo" />
             </a>
           </li>
 
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-2-color.png" alt="client logo" />
+              <img src="/images/logo-2-color.png" alt="client logo" />
             </a>
           </li>
 
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-3-color.png" alt="client logo" />
+              <img src="/images/logo-3-color.png" alt="client logo" />
             </a>
           </li>
 
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-4-color.png" alt="client logo" />
+              <img src="/images/logo-4-color.png" alt="client logo" />
             </a>
           </li>
 
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-5-color.png" alt="client logo" />
+              <img src="/images/logo-5-color.png" alt="client logo" />
             </a>
           </li>
 
           <li className="clients-item">
             <a href="#">
-              <img src="./images/logo-6-color.png" alt="client logo" />
+              <img src="/images/logo-6-color.png" alt="client logo" />
             </a>
           </li>
         </ul>

@@ -1,6 +1,6 @@
 import { IonIcon } from "@ionic/react";
 import { chevronBack } from "ionicons/icons";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export type SelectProps = {
   onSelect: (value: { value: string; label: string }) => void;

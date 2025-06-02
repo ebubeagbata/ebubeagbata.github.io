@@ -20,28 +20,28 @@ const projects = [
     category: "branding",
     img: "/images/projects/devil-daught-thumbnail.png",
     alt: "devil daught",
-    pdf: "./pdfs/Devil.pdf",
+    pdf: "/pdfs/Devil.pdf",
   },
   {
     title: "Aure",
     category: "branding",
     img: "/images/projects/aure-thumbnail.png",
     alt: "aure",
-    pdf: "./pdfs/Aure.pdf",
+    pdf: "/pdfs/Aure.pdf",
   },
   {
     title: "Bonfire",
     category: "branding",
     img: "/images/projects/bonfire-thumbnail.png",
     alt: "bonfire",
-    pdf: "./pdfs/Bonfire.pdf",
+    pdf: "/pdfs/Bonfire.pdf",
   },
   {
     title: "Wild & Organic",
     category: "branding",
     img: "/images/projects/wild&organic-thumbnail.png",
     alt: "wild&organic",
-    pdf: "./pdfs/Devil.pdf",
+    pdf: "/pdfs/Devil.pdf",
   },
 ];
 

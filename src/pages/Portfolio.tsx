@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { IonIcon } from "@ionic/react";
-import { chevronBack, eyeOutline, closeOutline } from "ionicons/icons";
+import { eyeOutline, closeOutline } from "ionicons/icons";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
 import { useWindowSize } from "@uidotdev/usehooks";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
-import '../css/animationLoading.css';
+import "../css/animationLoading.css";
+import Select from "../components/Select";
 
 const categories = [
   { label: "All", value: "all" },
@@ -98,29 +99,11 @@ export default function Portfolio() {
           ))}
         </ul>
 
-        <div className="filter-select-box">
-          <button className="filter-select" data-select>
-            <div className="select-value">{selectedCategoryLabel}</div>
-            <div className="select-icon">
-              <IonIcon icon={chevronBack} />
-            </div>
-          </button>
-
-          <ul className="select-list">
-            {categories.map((cat) => (
-              <li className="select-item" key={cat.value}>
-                <button
-                  data-select-item
-                  onClick={() => {
-                    setSelectedCategory(cat.value);
-                  }}
-                >
-                  {cat.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Select
+          elements={categories}
+          onSelect={(cat) => setSelectedCategory(cat.value)}
+          selectedLabel={selectedCategoryLabel}
+        />
 
         <ul className="project-list">
           {filteredProjects.map((project, idx) => (

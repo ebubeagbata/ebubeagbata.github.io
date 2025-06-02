@@ -143,7 +143,7 @@ export default function About() {
         </div>
       )}
 
-      <section className="clients">
+      {/* <section className="clients">
         <h3 className="h3 clients-title">Clients</h3>
 
         <ul className="clients-list has-scrollbar">
@@ -183,7 +183,7 @@ export default function About() {
             </a>
           </li>
         </ul>
-      </section>
+      </section> */}
     </article>
   );
 }

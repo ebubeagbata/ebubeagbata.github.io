@@ -19,39 +19,46 @@ export default function Resume() {
 
         <ol className="timeline-list">
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">
-              University school of the arts
-            </h4>
+            <h4 className="h4 timeline-item-title">Federal Polytechnic, Oko</h4>
 
-            <span>2007 — 2008</span>
+            <span>2015 — 2019</span>
 
             <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-              delenit atque corrupti, quos dolores et quas molestias exceptur.
+              <b>
+                Higher National Diploma in Business Administration and
+                Management
+              </b>
+              <br />
+              Completed with a focus on strategic planning, entrepreneurship,
+              and business development. Knowledge that supports my work as a
+              designer for business-focused brands.
             </p>
           </li>
 
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">New york academy of art</h4>
+            <h4 className="h4 timeline-item-title">Federal Polytechnic, Oko</h4>
 
-            <span>2006 — 2007</span>
+            <span>2012 — 2014</span>
 
             <p className="timeline-text">
-              Ratione voluptatem sequi nesciunt, facere quisquams facere menda
-              ossimus, omnis voluptas assumenda est omnis..
+              <b>National Diploma in Business Administration and Management</b>
+              <br />
+              Developed a strong understanding of business operations,
+              marketing, and management, skills that now enhance my strategic
+              approach to design.
             </p>
           </li>
 
           <li className="timeline-item">
             <h4 className="h4 timeline-item-title">
-              High school of art and design
+              Saint Theresa’s Secondary School
             </h4>
 
-            <span>2002 — 2004</span>
+            <span>2005 — 2011</span>
 
             <p className="timeline-text">
-              Duis aute irure dolor in reprehenderit in voluptate, quila
-              voluptas mag odit aut fugit, sed consequuntur magni dolores eos.
+              Began developing my skills in art and design through personal
+              projects and school activities.
             </p>
           </li>
         </ol>
@@ -68,35 +75,40 @@ export default function Resume() {
 
         <ol className="timeline-list">
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Creative director</h4>
+            <h4 className="h4 timeline-item-title">
+              Freelance Brand & UI/UX Designer
+            </h4>
 
-            <span>2015 — Present</span>
+            <span>2024 — Present</span>
 
             <p className="timeline-text">
-              Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit
-              atque corrupti, quos dolores et qvuas molestias exceptur.
+              Collaborate with small businesses and startups to develop
+              strategic brand identities and cohesive visual systems. Design
+              intuitive and engaging user interfaces for websites and digital
+              products. Manage projects end-to-end, from client discovery and
+              strategy to final design delivery. Apply business knowledge to
+              create design solutions that support brand growth and user
+              engagement.
             </p>
           </li>
 
           <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Art director</h4>
+            <h4 className="h4 timeline-item-title">
+              Brand Designer & UI/UX Design Support
+            </h4>
 
-            <span>2013 — 2015</span>
-
-            <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-              delenit atque corrupti, quos dolores et quas molestias exceptur.
-            </p>
-          </li>
-
-          <li className="timeline-item">
-            <h4 className="h4 timeline-item-title">Web designer</h4>
-
-            <span>2010 — 2013</span>
+            <span>2022 — 2024</span>
 
             <p className="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum
-              delenit atque corrupti, quos dolores et quas molestias exceptur.
+              <b>Zeuch Interactive Ltd</b>
+              <br />
+              Designed brand identities, including logos, visual systems, and
+              marketing materials for startups and small businesses.
+              Collaborated with the UI/UX team to support the creation of
+              user-friendly digital interfaces. Contributed to client
+              presentations, moodboards, and style guides to ensure brand
+              consistency across platforms. Helped bridge brand strategy and
+              digital design by aligning visuals with user expectations.
             </p>
           </li>
         </ol>
@@ -195,7 +207,6 @@ export default function Resume() {
               ></div>
             </div>
           </li>
-
         </ul>
       </section>
     </article>

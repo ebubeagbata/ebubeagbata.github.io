@@ -7,6 +7,6 @@ export default [
     route("resume", "./pages/Resume.tsx"),
     route("portfolio", "./pages/Portfolio.tsx"),
     // route("blog", "./pages/Blog.tsx"),
-    route("contact", "./pages/Contact.tsx"),
+    // route("contact", "./pages/Contact.tsx"),
   ]),
 ] satisfies RouteConfig;

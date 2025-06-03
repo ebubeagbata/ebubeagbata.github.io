@@ -9,8 +9,8 @@ export default function NavBar() {
     { label: "About", path: pathClean("/") },
     { label: "Resume", path: pathClean("/resume") },
     { label: "Portfolio", path: pathClean("/portfolio") },
-    //{ label: "Blog", path: "/blog" },
-    { label: "Contact", path: pathClean("/contact") },
+    // { label: "Blog", path: "/blog" },
+    // { label: "Contact", path: pathClean("/contact") },
   ];
 
   return (

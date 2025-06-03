@@ -19,16 +19,20 @@ export default function About() {
 
       <section className="about-text">
         <p>
-          Hi, I'm Ebubechukwu — a passionate brand designer with a growing focus
-          on UI/UX design. With a strong foundation in visual storytelling and
-          brand identity, I'm now channeling my creativity and user-centered
-          mindset into crafting intuitive digital experiences.
+          Hi, I'm Ebubechukwu —{" "}
+          <b>
+            I'm a brand designer with a strong foundation in visual storytelling
+            and identity design, now growing my focus in UI/UX.
+          </b>{" "}
+          With three years of experience building bold, strategic brands, I'm
+          now applying that same creative thinking to craft digital experiences
+          that are intuitive, functional, and visually compelling.
         </p>
 
         <p>
-          I'm currently seeking opportunities where I can blend my design
-          background with my new skills in UI/UX to create impactful,
-          user-friendly products. Let's build something meaningful together.
+          I'm currently open to opportunities where I can blend my background in
+          branding with my evolving skills in UI/UX to create meaningful,
+          user-first products.
         </p>
       </section>
 

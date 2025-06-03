@@ -532,6 +532,11 @@ main {
   margin-bottom: 15px;
 }
 
+.about-text b {
+  font-weight: var(--fw-600);
+  color: var(--bg-gradient-jet);
+}
+
 /**
  * #service 
  */

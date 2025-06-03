@@ -7,10 +7,13 @@ import {
   calendarOutline,
   logoTiktok,
 } from "ionicons/icons";
+import { useState } from "react";
 
 export default function Sidebar() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <aside className="sidebar" data-sidebar>
+    <aside className={`sidebar ${sidebarOpen ? "active" : ""}`}>
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
@@ -33,7 +36,10 @@ export default function Sidebar() {
           <p className="title">Brand & UX/UI Designer</p>
         </div>
 
-        <button className="info_more-btn" data-sidebar-btn>
+        <button
+          className="info_more-btn"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
           <span>Show Contacts</span>
           <IonIcon icon={chevronDown}></IonIcon>
         </button>

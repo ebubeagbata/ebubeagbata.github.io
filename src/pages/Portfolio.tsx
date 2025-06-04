@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { preload } from 'react-dom';
 import { IonIcon } from "@ionic/react";
 import { eyeOutline, closeOutline } from "ionicons/icons";
-import { Document, Page } from "react-pdf";
-import { useWindowSize } from "@uidotdev/usehooks";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "../css/animationLoading.css";
@@ -20,28 +19,28 @@ const projects = [
     category: "branding",
     img: "/images/projects/devil-daught-thumbnail.png",
     alt: "devil daught",
-    pdf: "/pdfs/Devil.pdf",
+    src: "/images/projects/Devil.webp",
   },
   {
     title: "Aure",
     category: "branding",
     img: "/images/projects/aure-thumbnail.png",
     alt: "aure",
-    pdf: "/pdfs/Aure.pdf",
+    src: "/images/projects/Aure.webp",
   },
   {
     title: "Bonfire",
     category: "branding",
     img: "/images/projects/bonfire-thumbnail.png",
     alt: "bonfire",
-    pdf: "/pdfs/Bonfire.pdf",
+    src: "/images/projects/Bonfire.webp",
   },
   {
     title: "Wild & Organic",
     category: "branding",
     img: "/images/projects/wild&organic-thumbnail.png",
     alt: "wild&organic",
-    pdf: "/pdfs/Wide.pdf",
+    src: "/images/projects/Wild.webp",
   },
 ];
 
@@ -50,8 +49,12 @@ export default function Portfolio() {
   const [zoomedProject, setZoomedProject] = useState<
     null | (typeof projects)[0]
   >(null);
-  const { width } = useWindowSize();
-  const [documentLoaded, setDocumentLoaded] = useState(false);
+
+  useEffect(() => {
+    for (const project of projects) {
+      preload(project.src, { as: "image" });
+    }
+  }, []);
 
   const filteredProjects =
     selectedCategory === "all"
@@ -61,19 +64,6 @@ export default function Portfolio() {
   const selectedCategoryLabel =
     categories.find((c) => c.value === selectedCategory)?.label ||
     "Select category";
-
-  // Just to full the space while loading
-  const loadingIndicator = (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "90vh",
-        width: "100%",
-      }}
-    />
-  );
 
   return (
     <article className="portfolio active" data-page="portfolio">
@@ -137,7 +127,7 @@ export default function Portfolio() {
         </ul>
       </section>
 
-      {zoomedProject && (
+      {
         <div
           style={{
             position: "fixed",
@@ -150,10 +140,10 @@ export default function Portfolio() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            visibility: zoomedProject ? "visible" : "hidden",
           }}
           onClick={() => {
             setZoomedProject(null);
-            setDocumentLoaded(false);
           }}
         >
           <div
@@ -171,7 +161,6 @@ export default function Portfolio() {
             <button
               onClick={() => {
                 setZoomedProject(null);
-                setDocumentLoaded(false);
               }}
               style={{
                 position: "absolute",
@@ -191,56 +180,25 @@ export default function Portfolio() {
             <div
               style={{
                 maxHeight: "90vh",
-                overflowY: documentLoaded ? "auto" : "hidden",
-                overflowX: "hidden",
+                overflowY: "auto",
+                width: "100%",
                 position: "relative",
               }}
             >
-              <Document
-                file={zoomedProject.pdf}
-                loading={loadingIndicator}
-                onLoadedData={(pdf) => {
-                  console.log(`Loaded PDF with ${pdf.numPages} pages`);
+              <img
+                src={zoomedProject?.src}
+                alt={zoomedProject?.title}
+                style={{
+                  display: "block",
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "contain",
                 }}
-              >
-                <Page
-                  onRenderSuccess={() => {
-                    setDocumentLoaded(true);
-                  }}
-                  loading={loadingIndicator}
-                  pageNumber={1}
-                  width={width ? width * 0.8 : 1.0}
-                />
-              </Document>
-              {!documentLoaded && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    textAlign: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <div className="loading-dots">
-                      <span />
-                      <span />
-                      <span />
-                    </div>
-                  </div>
-                </div>
-              )}
+              />
             </div>
           </div>
         </div>
-      )}
+      }
     </article>
   );
 }

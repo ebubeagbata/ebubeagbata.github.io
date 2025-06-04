@@ -6,6 +6,7 @@ import {
   mailOutline,
   calendarOutline,
   logoTiktok,
+  logoBehance,
 } from "ionicons/icons";
 import { useState } from "react";
 
@@ -110,6 +111,15 @@ export default function Sidebar() {
               className="social-link"
             >
               <IonIcon icon={logoInstagram}></IonIcon>
+            </a>
+          </li>
+          <li className="social-item">
+            <a
+              href="https://www.behance.net/ebubechagbata2"
+              target="_blank"
+              className="social-link"
+            >
+              <IonIcon icon={logoBehance}></IonIcon>
             </a>
           </li>
         </ul>

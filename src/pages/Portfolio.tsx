@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { preload } from 'react-dom';
 import { IonIcon } from "@ionic/react";
 import { eyeOutline, closeOutline } from "ionicons/icons";
-import "react-pdf/dist/Page/TextLayer.css";
-import "react-pdf/dist/Page/AnnotationLayer.css";
 import "../css/animationLoading.css";
 import Select from "../components/Select";
 

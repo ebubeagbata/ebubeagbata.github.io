@@ -15,30 +15,37 @@ const projects = [
   {
     title: "Devil's Daught",
     category: "branding",
-    img: "/images/projects/devil-daught-thumbnail.png",
+    img: "/images/projects/devil-daught-thumbnail.webp",
     alt: "devil daught",
-    src: "/images/projects/Devil.webp",
+    src: "/images/projects/devil.png",
   },
   {
     title: "Aure",
     category: "branding",
     img: "/images/projects/aure-thumbnail.png",
     alt: "aure",
-    src: "/images/projects/Aure.webp",
+    src: "/images/projects/aure.webp",
   },
   {
     title: "Bonfire",
     category: "branding",
-    img: "/images/projects/bonfire-thumbnail.png",
+    img: "/images/projects/bonfire-thumbnail.webp",
     alt: "bonfire",
-    src: "/images/projects/Bonfire.webp",
+    src: "/images/projects/bonfire.webp",
   },
   {
     title: "Wild & Organic",
     category: "branding",
     img: "/images/projects/wild&organic-thumbnail.png",
     alt: "wild&organic",
-    src: "/images/projects/Wild.webp",
+    src: "/images/projects/wild.webp",
+  },
+  {
+    title: "Fire Pizza",
+    category: "ux-ui",
+    img: "/images/projects/fire-pizza-thumbnail.webp",
+    alt: "fire-pizza",
+    src: "/images/projects/fire-pizza.png",
   },
 ];
 

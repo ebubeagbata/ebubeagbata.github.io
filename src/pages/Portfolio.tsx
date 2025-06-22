@@ -157,7 +157,6 @@ export default function Portfolio() {
               borderRadius: 8,
               padding: 24,
               maxWidth: "90vw",
-              width: "90vw",
               boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
               position: "relative",
             }}

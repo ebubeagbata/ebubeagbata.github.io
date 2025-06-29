@@ -24,7 +24,7 @@ const projects = [
     category: "branding",
     img: "/images/projects/aure-thumbnail.png",
     alt: "aure",
-    src: "/images/projects/aure.webp",
+    src: "/images/projects/aure.png",
   },
   {
     title: "Bonfire",
@@ -38,7 +38,7 @@ const projects = [
     category: "branding",
     img: "/images/projects/wild&organic-thumbnail.png",
     alt: "wild&organic",
-    src: "/images/projects/wild.webp",
+    src: "/images/projects/wild.png",
   },
   {
     title: "Fire Pizza",

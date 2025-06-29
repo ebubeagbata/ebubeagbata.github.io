@@ -57,7 +57,7 @@ export default function About() {
         </SkillList>
       </section>
 
-      <section className="testimonials">
+      {/* <section className="testimonials">
         <h3 className="h3 testimonials-title">Testimonials</h3>
 
         <TestimonialList>
@@ -145,7 +145,7 @@ export default function About() {
             </section>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* <section className="clients">
         <h3 className="h3 clients-title">Clients</h3>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { preload } from "react-dom";
 import { IonIcon } from "@ionic/react";
-import { eyeOutline, closeOutline, closeCircleSharp } from "ionicons/icons";
+import { eyeOutline, closeCircleSharp } from "ionicons/icons";
 import "../css/animationLoading.css";
 import Select from "../components/Select";
 

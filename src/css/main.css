@@ -943,7 +943,7 @@ main {
 
 .project-item-card {
   border-radius: 8px;
-  padding: 22px;
+  padding: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   position: relative;
   background: #fff;
@@ -957,7 +957,7 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 12px;
   color: #333;
   z-index: 1000;
 }
@@ -1381,6 +1381,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .project-item-card {
+    padding: 26px;
     max-width: 90vw;
   }
 
@@ -1712,6 +1713,15 @@ textarea.form-input::-webkit-resizer {
   .form-btn ion-icon {
     font-size: 18px;
   }
+
+  .project-item-card {
+    max-width: 90vw;
+    padding: 26px;
+  }
+
+  .close-button {
+    font-size: 26px;
+  }
 }
 
 /**
@@ -1769,6 +1779,7 @@ textarea.form-input::-webkit-resizer {
    */
   .project-item-card {
     max-width: 80vw;
+    padding: 28px;
   }
 
   .article-title {

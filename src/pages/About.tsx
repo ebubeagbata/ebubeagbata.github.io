@@ -1,15 +1,6 @@
-import { IonIcon } from "@ionic/react";
-import { closeOutline } from "ionicons/icons";
 import { SkillList, SkillItem } from "../components/Skills";
-import {
-  TestimonialList,
-  TestimonialItem,
-  type TestimonialType,
-} from "../components/Testimonial";
-import { useState } from "react";
 
 export default function About() {
-  const [modal, setModal] = useState<TestimonialType | undefined>();
 
   return (
     <article className="about active" data-page="about">

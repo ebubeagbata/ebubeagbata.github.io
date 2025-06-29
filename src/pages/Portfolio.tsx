@@ -152,14 +152,7 @@ export default function Portfolio() {
           }}
         >
           <div
-            style={{
-              background: "#fff",
-              borderRadius: 8,
-              padding: 24,
-              maxWidth: "90vw",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
-              position: "relative",
-            }}
+            className="project-item-card"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -187,6 +180,7 @@ export default function Portfolio() {
                 overflowY: "auto",
                 width: "100%",
                 position: "relative",
+                borderRadius: "8px",
               }}
             >
               <img

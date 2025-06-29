@@ -941,14 +941,26 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
- .project-item-card {
-    border-radius: 8px;
-    padding: 26px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    position: relative;
-    background: #fff;
-    max-width: 90vw;
- }
+.project-item-card {
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #fff;
+  max-width: 90vw;
+}
+
+.close-button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  z-index: 1000;
+}
 
 .filter-list {
   display: none;
@@ -1370,6 +1382,10 @@ textarea.form-input::-webkit-resizer {
 
   .project-item-card {
     max-width: 90vw;
+  }
+
+  .close-button {
+    font-size: 26px;
   }
 }
 

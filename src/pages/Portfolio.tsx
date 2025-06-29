@@ -159,17 +159,7 @@ export default function Portfolio() {
               onClick={() => {
                 setZoomedProject(null);
               }}
-              style={{
-                position: "absolute",
-                top: '1%',
-                right: '1%',
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                fontSize: 24,
-                color: "#333",
-                zIndex: 1000,
-              }}
+              className="close-button"
               aria-label="Close zoom"
             >
               <IonIcon icon={closeCircleSharp} />

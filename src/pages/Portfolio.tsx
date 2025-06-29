@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { preload } from 'react-dom';
+import { preload } from "react-dom";
 import { IonIcon } from "@ionic/react";
-import { eyeOutline, closeOutline } from "ionicons/icons";
+import { eyeOutline, closeOutline, closeCircleSharp } from "ionicons/icons";
 import "../css/animationLoading.css";
 import Select from "../components/Select";
 
@@ -161,8 +161,8 @@ export default function Portfolio() {
               }}
               style={{
                 position: "absolute",
-                top: 12,
-                right: 12,
+                top: '1%',
+                right: '1%',
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -172,7 +172,7 @@ export default function Portfolio() {
               }}
               aria-label="Close zoom"
             >
-              <IonIcon icon={closeOutline} />
+              <IonIcon icon={closeCircleSharp} />
             </button>
             <div
               style={{

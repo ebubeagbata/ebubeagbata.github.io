@@ -18,7 +18,7 @@ export default function Sidebar() {
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img
-            src="/images/avatar-ebube.png"
+            src="/images/avatar-ebube-yellow.png"
             alt="Ebubechukwu Agbata"
             style={{
               objectFit: "cover",

@@ -7,6 +7,7 @@ import {
   calendarOutline,
   logoTiktok,
   logoBehance,
+  chevronBack,
 } from "ionicons/icons";
 import { useState } from "react";
 
@@ -42,7 +43,7 @@ export default function Sidebar() {
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
           <span>Show Contacts</span>
-          <IonIcon icon={chevronDown}></IonIcon>
+          <IonIcon icon={!sidebarOpen ? chevronBack : chevronDown}></IonIcon>
         </button>
       </div>
 
